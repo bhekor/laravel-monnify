@@ -1,0 +1,61 @@
+{
+  "name": "bhekor/laravel-monnify",
+  "description": "A laravel package to seamlessly integrate monnify api within your laravel application",
+  "keywords": [
+    "laravel",
+    "monnify",
+    "payment",
+    "card payment",
+    "bank transfer"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ibidapo Adeolu",
+      "email": "adeoluibidapo@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2|^8.0",
+    "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "mockery/mockery": "^1.4.4",
+    "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0",
+    "orchestra/testbench-dusk": "^5.2|^6.0|^7.0|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bhekor\\LaravelMonnify\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bhekor\\LaravelMonnify\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+    "test-f": "vendor/bin/phpunit --filter"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Bhekor\\LaravelMonnify\\LaravelMonnifyServiceProvider"
+      ],
+      "aliases": {
+        "Monnify": "Bhekor\\LaravelMonnify\\Facades\\Monnify"
+      }
+    }
+  }
+}
