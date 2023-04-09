@@ -1,9 +1,9 @@
 <?php
 /**
  * Created By: Ibidapo Adeolu
- * PC: Enrico Systems
+ * PC: Bhekor Systems
  * Project: laravel-monnify
- * Company: Stimolive Technologies Limited
+ * Company: Webastry Designs
  * Class Name: Banks.php
  * Date Created: 3/2/21
  * Time Created: 4:11 PM

@@ -1,9 +1,9 @@
 <?php
 /**
  * Created By: Ibidapo Adeolu
- * PC: Enrico Systems
+ * PC: Bhekor Systems
  * Project: laravel-monnify
- * Company: Stimolive Technologies Limited
+ * Company: Webastry Designs
  * Class Name: MonnifyController.php
  * Date Created: 9/18/20
  * Time Created: 8:07 PM

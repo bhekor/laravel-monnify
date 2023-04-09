@@ -1,9 +1,9 @@
 <?php
 /**
  * Created By: Ibidapo Adeolu
- * PC: Enrico Systems
+ * PC: Bhekor Systems
  * Project: laravel-monnify
- * Company: Stimolive Technologies Limited
+ * Company: Webastry Designs
  * Class Name: Disbursements.php
  * Date Created: 3/2/21
  * Time Created: 5:52 PM

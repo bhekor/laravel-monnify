@@ -1,9 +1,9 @@
 <?php
 /**
  * Created By: Ibidapo Adeolu
- * PC: Enrico Systems
+ * PC: Bhekor Systems
  * Project: laravel-monnify
- * Company: Stimolive Technologies Limited
+ * Company: Webastry Designs
  * Class Name: Transactions.php
  * Date Created: 3/2/21
  * Time Created: 4:22 PM
@@ -80,7 +80,7 @@ abstract class Transactions
      * @throws MonnifyFailedRequestException
      * @link https://docs.teamapt.com/display/MON/Initialize+Transaction
      */
-    public function initializeTransaction(float $amount, string $customerName, string $customerEmail, string $paymentReference, string $paymentDescription, string $redirectUrl, MonnifyPaymentMethods $monnifyPaymentMethods, MonnifyIncomeSplitConfig $incomeSplitConfig = null, string $currencyCode = null)
+    public function initializeTransaction(float $amount, string $customerName, string $customerEmail, string $paymentReference, string $paymentDescription, string $redirectUrl, MonnifyPaymentMethods $monnifyPaymentMethods, object $monnifyMetaData = null, MonnifyIncomeSplitConfig $incomeSplitConfig = null, string $currencyCode = null)
     {
         $endpoint = "{$this->monnify->baseUrl}{$this->monnify->v1}merchant/transactions/init-transaction";
 
@@ -94,6 +94,7 @@ abstract class Transactions
             "contractCode" => $this->config['contract_code'],
             "redirectUrl" => trim($redirectUrl),
             "paymentMethods" => $monnifyPaymentMethods->toArray(),
+            "metaData" => $monnifyMetaData,
         ];
         if ($incomeSplitConfig !== null)
             $formData["incomeSplitConfig"] = $incomeSplitConfig->toArray();
