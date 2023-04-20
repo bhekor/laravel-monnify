@@ -90,7 +90,7 @@ class Monnify
     private function getToken()
     {
         $endpoint = "{$this->baseUrl}{$this->v1}auth/login";
-        $response = $this->withBasicAuth()->post($endpoint);
+        $response = $this->withBasicAuth()->retry(3, 100)->post($endpoint);
 
         $responseObject = json_decode($response->body());
         if (!$response->successful())
@@ -136,7 +136,7 @@ class Monnify
     {
         if (time() >= $this->oAuth2TokenExpires) {
             $this->getToken();
-            $this->httpClient = Http::withToken($this->oAuth2Token);
+            $this->httpClient = Http::retry(3, 100)->withToken($this->oAuth2Token);
         }
 
         return $this->httpClient;
