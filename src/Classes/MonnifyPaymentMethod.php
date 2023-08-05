@@ -18,6 +18,8 @@ class MonnifyPaymentMethod
     private static $cache = [];
     private const CARD = "CARD";
     private const ACCOUNT_TRANSFER = "ACCOUNT_TRANSFER";
+    private const USSD = "USSD";
+    private const PHONE_NUMBER = "PHONE_NUMBER";
 
     /**
      * MonnifyPaymentMethod constructor.
@@ -44,6 +46,20 @@ class MonnifyPaymentMethod
         return self::$cache[self::ACCOUNT_TRANSFER];
     }
 
+    public static function USSD(): MonnifyPaymentMethod
+    {
+        if (!key_exists(self::USSD, self::$cache))
+            self::$cache[self::USSD] = new MonnifyPaymentMethod(3, self::USSD);
+        return self::$cache[self::USSD];
+    }
+
+    public static function PHONE_NUMBER(): MonnifyPaymentMethod
+    {
+        if (!key_exists(self::PHONE_NUMBER, self::$cache))
+            self::$cache[self::PHONE_NUMBER] = new MonnifyPaymentMethod(4, self::PHONE_NUMBER);
+        return self::$cache[self::PHONE_NUMBER];
+    }
+
     public function getID(): int
     {
         return $this->id;
@@ -61,6 +77,10 @@ class MonnifyPaymentMethod
                 return self::CARD();
             case 2:
                 return self::ACCOUNT_TRANSFER();
+            case 3:
+                return self::USSD();
+            case 4:
+                return self::PHONE_NUMBER();
         }
     }
 
