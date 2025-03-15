@@ -1,6 +1,6 @@
 # Laravel Monnify
 
-[![Build Status](https://travis-ci.org/bhekor/laravel-monnify.svg?branch=master)](https://travis-ci.org/bhekor/laravel-monnify)
+[![Build Status](https://travis-ci.org/bhekor/laravel-monnify.svg?branch=main)](https://travis-ci.org/github/bhekor/laravel-monnify)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bhekor/laravel-monnify.svg?style=flat-square)](https://packagist.org/packages/bhekor/laravel-monnify)
 [![Latest Stable Version](https://poser.pugx.org/bhekor/laravel-monnify/v/stable)](https://packagist.org/packages/bhekor/laravel-monnify)
 [![Total Downloads](https://poser.pugx.org/bhekor/laravel-monnify/downloads)](https://packagist.org/packages/bhekor/laravel-monnify)
